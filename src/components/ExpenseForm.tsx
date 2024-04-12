@@ -137,7 +137,8 @@ setPreviusAmount(editingExpense.amount)
                 <DatePicker
                     className="bg-slate-100 p-2 border-0"
                     value={expense.date}
-                    onChange={handleDateChange}
+                    // @ts-ignore
+                    onChange={(value: Date | Date[] | null) => handleDateChange(value || [])}
                 />
             </div>
 

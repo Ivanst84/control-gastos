@@ -52,13 +52,13 @@ type ExpenseDetailProps = {
 
         <div>
         <img 
-        src={`/icono_${categoryInfo.icon}.svg`}
+        src={`/icono_${(categoryInfo as { icon: string }).icon}.svg`}
         alt="icono gasto"
         className='w-12 h-12 bg-blue-100 p-2 rounded-full text-blue-600'
         />
         </div>
         <div className='flex-1 space-y-2'>
-            <p className='text-sm font-bold uppercase text-slate-500'>{categoryInfo.name}</p>
+            <p className='text-sm font-bold uppercase text-slate-500'>{(categoryInfo as { name: string }).name}</p>
             <p>{expense.expenseName}</p>
             <p className='text-slate-600 text-sm'>{formatDate(expense.date!.toString())}</p>
         </div>

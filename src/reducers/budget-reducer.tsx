@@ -1,4 +1,4 @@
-import { DraftExpense, Expense } from "../types"
+import { Category, DraftExpense, Expense } from "../types"
 import {v4 as uuidv4} from 'uuid'
 export type BudgetActions =
     { type: 'add-budget', payload: { budget: number } } |
